@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Near Me</string>
+
+    <string name="tabServices">Services</string>
+    <string name="tabFun">Fun</string>
+    <string name="tabIndustry">Industry</string>
+    <string name="tabEducation">Education</string>
+</resources>

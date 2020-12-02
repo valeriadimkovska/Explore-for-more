@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddNewItem">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?android:attr/actionBarSize" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <EditText
+        android:id="@+id/name_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:textSize="15dp"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="#FA2717"/>
+
+    <EditText
+        android:id="@+id/address_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:textSize="15dp"
+        android:hint="Address"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_txt"
+        android:backgroundTint="#FA2717"/>
+
+    <EditText
+        android:id="@+id/latitude_txt"
+        android:layout_width="160dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#FA2717"
+        android:ems="10"
+        android:hint="Latitude"
+        android:inputType="numberDecimal"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/longitude_txt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/address_txt" />
+
+    <EditText
+        android:id="@+id/longitude_txt"
+        android:layout_width="160dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="#FA2717"
+        android:ems="10"
+        android:hint="Longitude"
+        android:inputType="numberDecimal"
+        android:textSize="15dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/latitude_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/latitude_txt" />
+
+    <EditText
+        android:id="@+id/email_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:textSize="15dp"
+        android:hint="Email Address"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/latitude_txt"
+        android:backgroundTint="#FA2717"/>
+
+    <TextView
+        android:id="@+id/category_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:textSize="15dp"
+        android:text="Category"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_txt"
+        android:backgroundTint="#FA2717"/>
+
+    <CheckBox
+        android:id="@+id/services_check"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="15dp"
+        android:text="Services"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/category_txt"
+        android:backgroundTint="#FA2717"
+        tools:ignore="OnClick" />
+
+    <CheckBox
+        android:id="@+id/fun_check"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="15dp"
+        android:text="Fun"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/services_check"
+        android:backgroundTint="#FA2717"/>
+
+    <CheckBox
+        android:id="@+id/industry_check"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="15dp"
+        android:text="Industry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fun_check"
+        android:backgroundTint="#009688" />
+
+    <CheckBox
+        android:id="@+id/education_check"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="15dp"
+        android:text="Education"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/industry_check"
+        android:backgroundTint="#FA2717" />
+
+    <EditText
+        android:id="@+id/tel_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:textSize="15dp"
+        android:hint="Telephone"
+        android:inputType="number|phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/education_check"
+        android:backgroundTint="#FA2717"/>
+
+    <EditText
+        android:id="@+id/web_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:textSize="15dp"
+        android:hint="Web Site"
+        android:inputType="textWebEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tel_txt"
+        android:backgroundTint="#FA2717"/>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="16dp"
+        android:text="Save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/web_txt"
+        android:backgroundTint="#FA2717"
+        tools:ignore="OnClick" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
